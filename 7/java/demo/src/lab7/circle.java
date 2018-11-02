@@ -1,7 +1,8 @@
 package lab7;
 
 public class circle extends TwoDimentionalShape{
-	private double r, pi=3.14159265359;
+	private double r;
+	private final double pi=Math.PI;
 	private String name;
 	public circle(float x, float y, double r, String name) {
 		setX(x);
