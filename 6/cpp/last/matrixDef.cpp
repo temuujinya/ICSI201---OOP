@@ -205,8 +205,15 @@ void Matrix::operator *=(Matrix &a){
         }
     }
 }
-void Matrix::operator !(Matrix &a){
-    Matrix temp(a.getRow,a.getCol)
+ bool Matrix::operator !(void){
+    int row = getRow();
+    int col = getCol();
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                cout <<this -> getValues(&j,&i)<<"  ";
+            }
+            cout << endl;
+        }
 }
 
 float* Matrix::getValues2(int *row, int *col){
@@ -246,7 +253,7 @@ void Matrix::display(){
 }
 int Matrix::getRow(){
     return row;
-}
+} 
 
 int Matrix::getCol(){
     return col;

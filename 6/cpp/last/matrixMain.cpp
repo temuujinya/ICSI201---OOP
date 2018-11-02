@@ -39,13 +39,16 @@ int main(){
     // temp = matrix + matrixb;
     //  tempa = matrix * matrixb;
     // tempa+=matrix;
-    matrix*=matrixb;
-
+    // matrix*=matrixb;
     // matrix-=matrixb;
     // cout<<matrix[1][1];
+    // delete matrix[1];
+    !matrix;
     // cout<<tempa.getValues(&r,&c);    
     // temp->display();
-    matrix.display();
+    // matrix.display();
+    // !matrix;
+
     //  temp = matrix + na;
     // tempa.display();
      

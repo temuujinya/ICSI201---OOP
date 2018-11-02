@@ -19,8 +19,9 @@ class Matrix{
     void operator --(int);
     void operator +=(Matrix &a);
     void operator -=(Matrix &a);
+    //TODO: Санах ойн цоорхой шалгах
     void operator *=(Matrix &a);
-    void operator !(Matrix &a);
+    bool operator !(void);
     float* operator [](int a);
 
     ~Matrix();
