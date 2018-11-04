@@ -16,7 +16,6 @@ Matrix Matrix::operator +(Matrix  &a){
     for(int i=0;i<this->getRow();i++){
         for(int j=0;j<this->getCol();j++){
         float valuesSum= this->getValues(&i,&j)+a.getValues(&i,&j); 
-        //    cout<<valuesSum<<" ";
         temp.setValues(&i,&j,&valuesSum);
         }
     }
@@ -54,48 +53,6 @@ Matrix Matrix::operator *(Matrix &a){
             temp.setValues(&i,&j,&aa);
 		}
 	}
-
-
-
-
-    // int je=0;
-    // for(int i=0;i<a.getRow();i++){
-    //     float valuesMulti=0;    
-    //     int col=0,row=0;
-    //     for(int j=0;j<a.getCol();j++){
-    //         float vrjver =this->getValues(&i,&j);
-
-    //         valuesMulti+=vrjver*a.getValues(&j,&i);
-    //     }
-    //     temp->setValues(&col,&i,&valuesMulti);
-    //     valuesMulti=0;
-    //     col++; 
-    //     for(int j=0;j<a.getCol();j++){
-    //         int o=i+j;
-    //         float vrjver =this->getValues(&o,&j);
-    //         valuesMulti+=vrjver*a.getValues(&j,&o);
-    //         row=o;
-    //     }
-        
-    //     temp->setValues(&row,&col,&valuesMulti);
-    //     valuesMulti=0;
-    //     col=0; 
-        
-            //     }
-            // }
-            // int jT=j;j=0;
-            // while(j<a.getCol()){
-            //     valuesMulti+= vrjver*a.getValues(&j,&i); 
-            //     j++;
-            //     vrjver =this->getValues(&i,&j);
-            //     int jjT=j;
-            //     j=jT;
-            //     temp->setValues(&i,&j,&valuesMulti);
-            //     j=jjT;
-            // }
-            // cout<<valuesMulti<<" |";
-            // j=jT;
-        
         
     return temp;
 }
@@ -116,7 +73,6 @@ Matrix Matrix::operator -(Matrix &a){
 void Matrix::operator =(Matrix a){
     int row=a.getRow(),
         col=a.getCol();
-    // matrix = new float*[];
     this->setRow(&row);
     this->setCol(&col);
     delete [] values;
@@ -131,10 +87,6 @@ void Matrix::operator =(Matrix a){
 }
 
 void Matrix::operator ++(int){
-//    Matrix temp(*this);
-//    float i =1;
-//     temp = temp +i;
-//     this=&temp;
     for(int i=0;i<this->getRow();i++){
         for(int j=0;j<this->getCol();j++){
            float valuesSum= this->getValues(&i,&j)+1.0; 
@@ -145,10 +97,6 @@ void Matrix::operator ++(int){
 }
 
 void Matrix::operator --(int){
-//    Matrix temp(*this);
-//    float i =1;
-//     temp = temp +i;
-//     this=&temp;
     for(int i=0;i<this->getRow();i++){
         for(int j=0;j<this->getCol();j++){
            float valuesSab= this->getValues(&i,&j)-1.0; 
@@ -221,13 +169,6 @@ float* Matrix::getValues2(int *row, int *col){
 }
 
 float* Matrix:: operator [](int a){
-    // cout<<a;
-    // a*col;
-    // int j=0;
-    
-    // float *be=getValues2(&col,&row)
-    // float *ba=getValues2(&a,&j);
-    //
     float *bb = new float(col);
     for(int i=0;i<col;i++){
         bb[i]=*getValues2(&a,&i);
