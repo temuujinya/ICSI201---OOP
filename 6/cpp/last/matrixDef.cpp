@@ -70,7 +70,7 @@ Matrix Matrix::operator -(Matrix &a){
     return temp;
 }
 
-void Matrix::operator =(Matrix a){
+Matrix& Matrix::operator =(Matrix a){
     int row=a.getRow(),
         col=a.getCol();
     this->setRow(&row);
@@ -84,6 +84,9 @@ void Matrix::operator =(Matrix a){
             this->setValues(&i,&j,&values);
         }
     }
+    //Эсвэл параметрээр орж ирсэн объектыг буцааж болно
+    //учир нь утга оноож бөгөөд утга адил байна.
+    return (*this);
 }
 
 void Matrix::operator ++(int){

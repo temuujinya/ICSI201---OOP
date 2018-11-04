@@ -14,7 +14,7 @@ class Matrix{
     Matrix operator *(Matrix &a);
     Matrix operator -(Matrix &a);
     //TODO: Заалт буцаадаг болгох a=a=b;
-    void operator =(Matrix a);
+    Matrix& operator =(Matrix a);
     void operator ++(int);
     void operator --(int);
     void operator +=(Matrix &a);
