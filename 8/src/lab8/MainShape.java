@@ -36,6 +36,9 @@ public class MainShape {
 		
 		for(int i=0;i<10;i++){
 			System.out.println(shape[i].getName()+" "+shape[i].calcArea()+"\n");
+			if(shape[i] instanceof Triangle){
+//				System.out.println(((Triangle) shape[i]).getX1()+" "+shape[i].calcArea()+"\n");
+			}
 		}
 		
 	}
