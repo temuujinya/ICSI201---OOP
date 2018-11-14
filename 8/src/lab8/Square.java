@@ -1,13 +1,13 @@
 package lab8;
 
 public class Square extends TwoDimensionalShape {
-	protected double x[] = new double[4]; // tuhain dursni x coordinatin hemjeegeer sanah oi nootsloh 
-	protected double y[] = new double[4]; // tuhain dursni y coordinatin hemjeegeer sanah oi nootsloh
 
 	
 	// Parametertai baiguulach punkts
 	public Square(double x,double y, double length,String name) 
 	{
+		x= new double[4]; 
+		y= new double[4];
 		setName(name);
 		setLength(length);
 		setX(x);
