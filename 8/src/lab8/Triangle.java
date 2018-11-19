@@ -3,11 +3,11 @@ package lab8;
 import java.lang.Math;
 
 public class Triangle extends TwoDimensionalShape  {
-	protected double x[] = new double[3]; // tuhain dursni x coordinatin hemjeegeer sanah oi nootsloh 
-	protected double y[] = new double[3]; // tuhain dursni y coordinatin hemjeegeer sanah oi nootsloh
 	
 	public Triangle(double x,double y,double length,String name)
 	{
+		x= new double[3]; 
+		y= new double[3];
 		setName(name);
 		setLength(length);
 		setX(x);

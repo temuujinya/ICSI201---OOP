@@ -1,11 +1,11 @@
 package lab8;
 public class Circle extends TwoDimensionalShape {
-	protected double x[] = new double[1]; // tuhain dursni x coordinatin hemjeegeer sanah oi nootsloh 
-	protected double y[] = new double[1]; // tuhain dursni y coordinatin hemjeegeer sanah oi nootsloh
 	double pi = 3.14;
     // Duguin baiguulach puntkts
     public Circle(double x,double y,double length,String name) 
     {
+		x= new double[1]; 
+		y= new double[1];
     	setX(x);
     	setY(y);
     	setLength(length);
