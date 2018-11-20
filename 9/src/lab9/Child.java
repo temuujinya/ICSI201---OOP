@@ -5,10 +5,12 @@ public class Child extends Person{
 	protected String FavoriteToy;
 	
 	public Child() {
+		super("default name", "ssn",0);
 		setFavoriteToy("default");
 	}
 	
-	public Child(String FavoriteToy) {
+	public Child(String Name, String SSnum, int Age, String FavoriteToy) {
+		super(Name, SSnum, Age);
 		setFavoriteToy(FavoriteToy);
 	}
 	
