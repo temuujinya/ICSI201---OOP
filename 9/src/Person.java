@@ -4,7 +4,13 @@ public class Person {
 	
 	protected String name;
 	protected String SSnum;
-	protected int Age;
+	int Age;
+	
+	public Person(String name, String SSnum, int age) {
+		setName(name);
+		setSSnum(SSnum);
+		setAge(age);
+	}
 	
 	public String getName() {
 		return name;

@@ -8,6 +8,10 @@ public class JobDescription {
 		setDescription("default");
 	}
 	
+	public JobDescription(JobDescription job) {
+		this.Description = job.Description;
+	}
+	
 	public JobDescription(String Description) {
 		setDescription(Description);
 	}
